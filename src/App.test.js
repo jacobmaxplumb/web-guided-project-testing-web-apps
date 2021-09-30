@@ -28,7 +28,8 @@ test("on mount, new animal header renders", () => {
 
     expect(headerEls.length === 3).toBeTruthy();
     expect(headerEls.length).toBe(3);
-    
+    expect(headerEls).toHaveLength(3);
+
     // expect(headerEls).toBeTruthy();
     // expect(headerEls).toHaveTextContent("Add New Animal");
     // expect(headerEls).toBeInTheDocument();
