@@ -1,5 +1,6 @@
 import React from 'react';
 import {render, screen} from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
 import AnimalForm from './AnimalForm';
 
 test("renders without errors", () => {
@@ -13,7 +14,7 @@ test("displays species when submitting all fields", ()=> {
     //1. Give species input focus.
     // const speciesInput = screen.getByPlaceholderText("species");
     const speciesInput = screen.getByLabelText("Species:");
-    console.log(speciesInput);
+    userEvent(speciesInput).type("canine");
     
     //2. Type in species.
     //3. Give the age focus
