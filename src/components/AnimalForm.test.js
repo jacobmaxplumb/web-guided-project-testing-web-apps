@@ -43,7 +43,7 @@ test("displays species when submitting all fields", async () => {
     // });
 
     const speciesFeedback = await screen.findByText(species);
-    console.log(speciesFeedback);
+    expect(speciesFeedback).toBeInTheDocument();
 
 
     
