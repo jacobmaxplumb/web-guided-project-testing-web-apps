@@ -34,6 +34,10 @@ test("displays species when submitting all fields", async () => {
     const button = screen.getByRole("button");
     userEvent.click(button);
 
+
+    const speciesFeedback = screen.queryByText(species);
+    expect(speciesFeedback).toBeInTheDocument();
+
     //Assert: Check to see if species name appears
     
     // Promise Way
@@ -47,8 +51,8 @@ test("displays species when submitting all fields", async () => {
     // expect(speciesFeedback).toBeInTheDocument();
 
     // Await Way
-    await waitFor(()=> {
-        const speciesFeedback = screen.queryByText(species);
-        expect(speciesFeedback).toBeInTheDocument();
-    });
+    // await waitFor(()=> {
+    //     const speciesFeedback = screen.queryByText(species);
+    //     expect(speciesFeedback).toBeInTheDocument();
+    // });
 });
