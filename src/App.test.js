@@ -26,4 +26,5 @@ test("on mount, new animal header renders", () => {
 
     expect(headerEl).toBeTruthy();
     expect(headerEl).toHaveTextContent("Add New Animal");
+    expect(headerEl).toBeInTheDocument();
 });
