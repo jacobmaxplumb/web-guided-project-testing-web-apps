@@ -26,7 +26,9 @@ test("on mount, new animal header renders", () => {
     console.log(headerEls);
     //Assert: pass the test if our header element exists
 
-
+    expect(headerEls.length === 3).toBeTruthy();
+    expect(headerEls.length).toBe(3);
+    
     // expect(headerEls).toBeTruthy();
     // expect(headerEls).toHaveTextContent("Add New Animal");
     // expect(headerEls).toBeInTheDocument();
