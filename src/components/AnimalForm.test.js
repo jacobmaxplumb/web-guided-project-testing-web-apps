@@ -19,8 +19,10 @@ test("displays species when submitting all fields", ()=> {
     userEvent.type(speciesInput, "canine");
 
     //3. Give the age focus
-    const speciesInput = screen.getByLabelText("Age:");
+    const ageInput = screen.getByLabelText("Age:");
     //4. Type in age.
+    userEvent.type(ageInput, "12");
+
     //5. Give the notes focus
     //6. Type in notes.
     //7. click our submit button
