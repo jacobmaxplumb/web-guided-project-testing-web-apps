@@ -1,5 +1,5 @@
 import React from 'react';
-import {render, screen} from '@testing-library/react';
+import {render, screen, await} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import AnimalForm from './AnimalForm';
 
@@ -42,9 +42,14 @@ test("displays species when submitting all fields", async () => {
     //     expect(speciesFeedback).toBeInTheDocument();
     // });
 
+    // Async Way
+    // const speciesFeedback = await screen.findByText(species);
+    // expect(speciesFeedback).toBeInTheDocument();
+
+    // await
+
     const speciesFeedback = await screen.findByText(species);
     expect(speciesFeedback).toBeInTheDocument();
-
 
     
 });
