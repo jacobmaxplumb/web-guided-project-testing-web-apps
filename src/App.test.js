@@ -25,4 +25,5 @@ test("on mount, new animal header renders", () => {
     //Assert: pass the test if our header element exists
 
     expect(headerEl).toBeTruthy();
+    expect(headerEl).toHaveTextContent("Add New Animal");
 });
