@@ -7,7 +7,7 @@ test("renders without errors", () => {
     render(<AnimalForm/>);
 });
 
-test("displays species when submitting all fields", ()=> {
+test("displays species when submitting all fields", async () => {
     //Arrange: render our component
     render(<AnimalForm />);
     const species = "canine";
@@ -42,7 +42,9 @@ test("displays species when submitting all fields", ()=> {
     //     expect(speciesFeedback).toBeInTheDocument();
     // });
 
+    const speciesFeedback = await screen.findByText(species);
+    console.log(speciesFeedback);
 
-    
+
     
 });
