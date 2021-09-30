@@ -13,18 +13,21 @@ test("displays species when submitting all fields", ()=> {
     //Act: Submit our form
     //1. Give species input focus.
     // const speciesInput = screen.getByPlaceholderText("species");
-    const speciesInput = screen.getByLabelText("Species:");
+    const speciesInput = screen.getByLabelText(/species:/i);
     
     //2. Type in species.
     userEvent.type(speciesInput, "canine");
 
     //3. Give the age focus
-    const ageInput = screen.getByLabelText("Age:");
+    const ageInput = screen.getByLabelText(/age:/i);
     //4. Type in age.
     userEvent.type(ageInput, "12");
 
     //5. Give the notes focus
+    const noteInput = screen.getByLabelText(/notes:/i);
     //6. Type in notes.
+    userEvent.type(noteInput, "this cutest");
+
     //7. click our submit button
 
     //Assert: Check to see if species name appears
