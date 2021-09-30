@@ -14,7 +14,7 @@ test("on mount, new animal header renders", () => {
     //Act: find our header element
     
     //queryBy: if an element does not exist, returns a null value
-    // const headerEl = screen.queryByText("Add Old Animal");
+    const headerEl = screen.queryByText("Add Old Animal");
 
     //getBy: if an element does not exist, the test fails
     // const headerEl = screen.getByText("Add Old Animal");
@@ -22,8 +22,6 @@ test("on mount, new animal header renders", () => {
     //findBy: returns an element after a promise is completed
     // const headerEl = screen.findByText("Add New Animal");
 
-    console.log(headerEl);
-
     //Assert: pass the test if our header element exists
-    // expect(headerEl).toBeInTheDocument();
+    expect(true).toBe(false);
 });
