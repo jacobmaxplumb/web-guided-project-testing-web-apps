@@ -10,8 +10,10 @@ test("renders without errors", () => {
 test("on mount, new animal header renders", () => {
     //Arrange: render our App
     render(<App/>);
-    
+
     //Act: find our header element
+    const headerEl = screen.queryByText("Add New Animal");
+    console.log(headerEl);
 
     //Assert: pass the test if our header element exists
 });
