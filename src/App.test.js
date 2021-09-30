@@ -22,9 +22,12 @@ test("on mount, new animal header renders", () => {
     //findBy: returns an element after a promise is completed
     // const headerEl = screen.findByText("Add New Animal");
 
+    const headerEls = screen.queryAllByText("Add New Animal");
+
     //Assert: pass the test if our header element exists
 
-    expect(headerEl).toBeTruthy();
-    expect(headerEl).toHaveTextContent("Add New Animal");
-    expect(headerEl).toBeInTheDocument();
+
+    expect(headerEls).toBeTruthy();
+    expect(headerEls).toHaveTextContent("Add New Animal");
+    expect(headerEls).toBeInTheDocument();
 });
