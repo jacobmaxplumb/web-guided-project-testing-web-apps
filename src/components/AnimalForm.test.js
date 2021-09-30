@@ -10,13 +10,15 @@ test("renders without errors", () => {
 test("displays species when submitting all fields", ()=> {
     //Arrange: render our component
     render(<AnimalForm />);
+    const species = "canine";
+
     //Act: Submit our form
     //1. Give species input focus.
     // const speciesInput = screen.getByPlaceholderText("species");
     const speciesInput = screen.getByLabelText(/species:/i);
     
     //2. Type in species.
-    userEvent.type(speciesInput, "canine");
+    userEvent.type(speciesInput, species);
 
     //3. Give the age focus
     const ageInput = screen.getByLabelText(/age:/i);
@@ -33,6 +35,6 @@ test("displays species when submitting all fields", ()=> {
     userEvent.click(button);
 
     //Assert: Check to see if species name appears
-    const speciesFeedback = screen.getByText(/canine/i);
+    const speciesFeedback = screen.getByText(species);
     expect(speciesFeedback).toBeInTheDocument();
 });
