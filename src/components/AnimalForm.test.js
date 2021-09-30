@@ -46,8 +46,7 @@ test("displays species when submitting all fields", async () => {
     // const speciesFeedback = await screen.findByText(species);
     // expect(speciesFeedback).toBeInTheDocument();
 
-    // await
-
+    // Await Way
     await waitFor(()=> {
         const speciesFeedback = screen.queryByText(species);
         expect(speciesFeedback).toBeInTheDocument();
