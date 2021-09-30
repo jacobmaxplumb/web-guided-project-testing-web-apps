@@ -7,3 +7,6 @@ test("renders without errors", () => {
     render(<App/>);
 });
 
+test("on mount, new animal header renders", () => {
+    
+});
