@@ -33,4 +33,6 @@ test("displays species when submitting all fields", ()=> {
     userEvent.click(button);
 
     //Assert: Check to see if species name appears
+    const speciesFeedback = screen.getByText(/canine/i);
+    expect(speciesFeedback).toBeInTheDocument();
 });
