@@ -11,6 +11,8 @@ test("displays species when submitting all fields", ()=> {
     render(<AnimalForm />);
     //Act: Submit our form
     //1. Give species input focus.
+    const speciesInput = screen.getByPlaceholderText("species");
+    console.log(speciesInput);
     //2. Type in species.
     //3. Give the age focus
     //4. Type in age.
