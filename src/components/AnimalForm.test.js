@@ -35,10 +35,10 @@ test("displays species when submitting all fields", ()=> {
     userEvent.click(button);
 
     //Assert: Check to see if species name appears
+    
     const speciesPromise = screen.findByText(species);
     speciesPromise.then((speciesFeedback)=>{
-        console.log(speciesFeedback);
-        // expect(speciesFeedback).toBeInTheDocument();
-    })
+        expect(speciesFeedback).toBeInTheDocument();
+    });
     
 });
