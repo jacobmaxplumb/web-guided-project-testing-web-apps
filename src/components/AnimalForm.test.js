@@ -29,6 +29,7 @@ test("displays species when submitting all fields", ()=> {
     userEvent.type(noteInput, "this cutest");
 
     //7. click our submit button
+    const button = screen.getByRole("button");
 
     //Assert: Check to see if species name appears
 });
