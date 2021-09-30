@@ -24,7 +24,7 @@ const AnimalForm = ({ errors, touched, values }) => {
     };
     setTimeout(()=> {
       setAnimals([...animals, newAnimal]);
-    }, 3000);
+    }, 1);
   };
 
   return (
