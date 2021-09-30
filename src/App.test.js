@@ -14,7 +14,7 @@ test("on mount, new animal header renders", () => {
     //Act: find our header element
     
     //queryBy: if an element does not exist, returns a null value
-    const headerEl = screen.queryByText("add New Animal");
+    const headerEl = screen.queryByText("Add New Animal");
     // const headerEl = screen.queryByTestId("header");
 
     //getBy: if an element does not exist, the test fails
