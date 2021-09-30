@@ -23,5 +23,7 @@ test("on mount, new animal header renders", () => {
     // const headerEl = screen.findByText("Add New Animal");
 
     //Assert: pass the test if our header element exists
-    expect(true).toBe(false);
+    const item = 3;
+
+    expect(true).toBeFalsy();
 });
