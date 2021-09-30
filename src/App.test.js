@@ -13,8 +13,6 @@ test("on mount, new animal header renders", () => {
 
     //Act: find our header element
     
-    //queryBy: if an element does not exist, returns a null value
-    const headerEl = screen.queryByText("wdd New Animal" === /add new animal/i);
     // const headerEl = screen.queryByTestId("header");
 
     //getBy: if an element does not exist, the test fails
@@ -26,6 +24,9 @@ test("on mount, new animal header renders", () => {
     // const headerEls = screen.queryAllByText("Add New Animal");
     // console.log(headerEls);
 
+    //queryBy: if an element does not exist, returns a null value
+    const headerEl = screen.queryByText(/add new animal/i);
+    
     //Assert: pass the test if our header element exists
 
     // expect(headerEls.length === 3).toBeTruthy();
@@ -33,6 +34,6 @@ test("on mount, new animal header renders", () => {
     // expect(headerEls).toHaveLength(3);
 
     expect(headerEl).toBeTruthy();
-    expect(headerEl).toHaveTextContent("Add New Animal");
+    expect(headerEl).toHaveTextContent(/add new animal/i);
     expect(headerEl).toBeInTheDocument();
 });
